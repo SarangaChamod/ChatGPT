@@ -34,6 +34,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#161515", // Add your desired background color here
+    width: '100%',
   },
   topContent: {
     flex: 1,
