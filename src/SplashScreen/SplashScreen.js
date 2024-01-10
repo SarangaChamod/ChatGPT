@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { View, StyleSheet, Text, Image,  StatusBar  } from "react-native";
-import LottieView from "lottie-react-native";
 
 
 const SplashScreen = () => {
@@ -16,16 +15,14 @@ const SplashScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.topContent}>
-        <LottieView
-          autoPlay
-          loop={false}
+        <Image
           style={{
             width: 200,
             maxWidth: 200,
             height: 200,
-            marginBottom: -40,
+            marginBottom: -15,
           }}
-          source={require("../../assets/Json/chatgpta.json")}
+          source={require("../../assets/Images/chatgpt.png")}
         />
         <Text style={styles.text}>ChatGPT</Text>
       </View>
@@ -44,29 +41,30 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#161515", // Add your desired background color here
+    backgroundColor: "#10A37F", 
     width: "100%",
   },
   topContent: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
-    marginTop: 150,
+    marginTop: 200,
   },
   bottomContent: {
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: "auto",
+    padding: 12
   },
   text: {
     color: "white",
-    fontSize: 35,
+    fontSize: 41,
     // fontFamily: 'Montserrat-Medium'
   },
   openai: {
-    width: 100,
-    height: 25,
+    width: 125,
+    height: 35,
   },
 });
 

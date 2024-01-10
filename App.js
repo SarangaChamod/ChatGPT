@@ -19,6 +19,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {isLoaded ? <MainScreen /> : <SplashScreen />}
+      {/* <SplashScreen/> */}
       <StatusBar style="auto" />
     </View>
   );
@@ -27,7 +28,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
