@@ -13,7 +13,7 @@ const MainScreen = () => {
 const styles = StyleSheet.create({
   text: {
     color: 'red',
-    fontFamily: 'Montserrat-Medium'
+    // fontFamily: 'Montserrat-Medium'
   },
   
 });

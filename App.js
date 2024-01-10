@@ -11,11 +11,9 @@ export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulating an asynchronous task (e.g., fetching data, loading resources)
-    // You may want to replace this with your actual loading logic.
     setTimeout(() => {
       setIsLoaded(true); // Set isLoaded to true after the timeout
-    }, 3000); // Replace 3000 with the duration of your splash screen
+    }, 3000); 
   }, []);
 
   return (

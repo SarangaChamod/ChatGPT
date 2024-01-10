@@ -1,8 +1,18 @@
-import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import React, { useEffect } from "react";
+import { View, StyleSheet, Text, Image,  StatusBar  } from "react-native";
 import LottieView from "lottie-react-native";
 
+
 const SplashScreen = () => {
+  
+    useEffect(() => {
+      StatusBar.setHidden(true);
+      return () => {
+        // Show the status bar when the component unmounts
+        StatusBar.setHidden(false);
+      };
+    }, []);
+
   return (
     <View style={styles.container}>
       <View style={styles.topContent}>
@@ -35,7 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#161515", // Add your desired background color here
-    width: '100%',
+    width: "100%",
   },
   topContent: {
     flex: 1,
@@ -52,7 +62,7 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     fontSize: 35,
-    fontFamily: 'Montserrat-Medium'
+    // fontFamily: 'Montserrat-Medium'
   },
   openai: {
     width: 100,
