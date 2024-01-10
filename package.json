@@ -9,13 +9,22 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@babel/plugin-transform-async-generator-functions": "^7.23.7",
+    "@babel/plugin-transform-class-properties": "^7.23.3",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.23.4",
+    "@babel/plugin-transform-numeric-separator": "^7.23.4",
+    "@babel/plugin-transform-object-rest-spread": "^7.23.4",
+    "@babel/plugin-transform-optional-catch-binding": "^7.23.4",
+    "@babel/plugin-transform-optional-chaining": "^7.23.4",
     "@types/react": "~18.2.45",
     "expo": "~50.0.0-preview.7",
     "expo-status-bar": "~1.11.1",
     "lottie-react-native": "^6.4.1",
     "react": "18.2.0",
     "react-native": "^0.73.1",
-    "typescript": "^5.3.0"
+    "react-native-asset": "^2.1.1",
+    "typescript": "^5.3.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

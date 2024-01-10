@@ -15,14 +15,14 @@ const SplashScreen = () => {
             height: 200,
             marginBottom: -40,
           }}
-          source={require("../../assets/chatgpta.json")}
+          source={require("../../assets/Json/chatgpta.json")}
         />
         <Text style={styles.text}>ChatGPT</Text>
       </View>
       <View style={styles.bottomContent}>
         <Image
           style={styles.openai}
-          source={require("../../assets/openaiwa.png")}
+          source={require("../../assets/Images/openaiwa.png")}
         />
       </View>
     </View>
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     fontSize: 35,
+    fontFamily: 'Montserrat-Medium'
   },
   openai: {
     width: 100,
