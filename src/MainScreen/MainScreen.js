@@ -21,14 +21,14 @@ const MainScreen = () => {
 
   const [prompt, setPrompt] = useState("");
   const onSend = () => {
-    console.warn("Send", prompt);
+    // console.warn('Send :', prompt);
 
-    setMessages((existingMessage) => [
+    sendMessage((existingMessage) => [
       ...existingMessage,
       { role: "user", content: prompt },
     ]);
 
-    setPrompt("");
+    setPrompt(''); 
   };
   return (
     <SafeAreaView style={styles.container}>
@@ -42,7 +42,7 @@ const MainScreen = () => {
         <TextInput
           value={prompt}
           onChangeText={setPrompt}
-          placeholder="How can I help you"
+          placeholder="How can I help you ?"
           style={styles.textinput}
         />
 
