@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import MainScreen from './src/MainScreen/MainScreen'; // Import your main screen component
+import MainScreen from './src/app/MainScreen'; // Import your main screen component
 import SplashScreen from './src/SplashScreen/SplashScreen';
 
 
