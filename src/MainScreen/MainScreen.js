@@ -28,7 +28,7 @@ const MainScreen = () => {
       { role: "user", content: prompt },
     ]);
 
-    setPrompt(''); 
+    setPrompt("");
   };
   return (
     <SafeAreaView style={styles.container}>

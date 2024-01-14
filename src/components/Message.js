@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text } from "react-native";
-export default function Message({message}) {
+export default function Message({ message }) {
   return (
     <View
       style={[

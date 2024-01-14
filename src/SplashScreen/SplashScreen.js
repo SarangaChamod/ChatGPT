@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
-import { View, StyleSheet, Text, Image,  StatusBar  } from "react-native";
-
+import { View, StyleSheet, Text, Image, StatusBar } from "react-native";
 
 const SplashScreen = () => {
-  
-    useEffect(() => {
-      StatusBar.setHidden(true);
-      return () => {
-        // Show the status bar when the component unmounts
-        StatusBar.setHidden(false);
-      };
-    }, []);
+  useEffect(() => {
+    StatusBar.setHidden(true);
+    return () => {
+      // Show the status bar when the component unmounts
+      StatusBar.setHidden(false);
+    };
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -41,7 +39,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#10A37F", 
+    backgroundColor: "#10A37F",
     width: "100%",
   },
   topContent: {
@@ -55,7 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
     marginBottom: "auto",
-    padding: 12
+    padding: 12,
   },
   text: {
     color: "white",
