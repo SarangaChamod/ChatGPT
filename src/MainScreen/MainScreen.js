@@ -13,27 +13,37 @@ import {
 import Message from "../components/Message";
 
 const MainScreen = () => {
-  const [message, sendMessage] = useState([
+  const [messages, sendMessage] = useState([
     { role: "system", content: "You are a helpful assistant." },
     { role: "user", content: "Hello" },
     { role: "assistant", content: "Hello there, how can I help you" },
   ]);
 
   const [prompt, setPrompt] = useState("");
-  const onSend = () => {
+  const onSend = async () => {
     // console.warn('Send :', prompt);
+    const userMessage = { role: "user", content: prompt };
 
-    sendMessage((existingMessage) => [
-      ...existingMessage,
-      { role: "user", content: prompt },
-    ]);
-
+    sendMessage((existingMessage) => [...existingMessage, userMessage]);
     setPrompt("");
+
+    const result = await fetch("http://localhost:8082/completion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([...messages, userMessage]),
+    }); // Check If url is correct
+
+    const resultJSON = await result.json();
+    const answer = resultJSON.choices?.[0]?.message;
+
+    sendMessage((existingMessage) => [...existingMessage, answer]);
   };
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={message}
+        data={messages}
         contentContainerStyle={{ gap: 5, padding: 10 }}
         renderItem={({ item }) => <Message message={item} />}
       />
